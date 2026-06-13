@@ -510,46 +510,32 @@
             </div>
         </section>
 
-        <!-- Resume Document Viewer Section -->
+        <!-- Resume Section -->
         <section class="resume-section" id="resume">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Credentials</span>
                     <h2 class="section-title">Curriculum Vitae</h2>
-                    <p class="section-subtitle">Read my official resume below or download it directly to your device.</p>
+                    <p class="section-subtitle">Download my official resume or view it directly in your browser.</p>
                 </div>
                 
-                <div class="resume-container">
-                    <div class="resume-actions-bar">
-                        <span class="file-name"><i data-lucide="file-text"></i> resume-5.pdf (131 KB)</span>
-                        <div class="action-buttons">
-                            <a href="resume-5.pdf" download class="btn btn-primary btn-sm">
-                                <i data-lucide="download-cloud"></i> Download
+                <div class="resume-card-container">
+                    <div class="resume-download-card">
+                        <div class="resume-card-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <div class="resume-card-details">
+                            <h3>Erick_Troyo_Resume.pdf</h3>
+                            <p class="file-meta">PDF Document &bull; 131 KB</p>
+                        </div>
+                        <div class="resume-card-actions">
+                            <a href="resume-5.pdf" download class="btn btn-primary btn-lg">
+                                <i data-lucide="download-cloud"></i> Download Resume
                             </a>
-                            <a href="resume-5.pdf" target="_blank" class="btn btn-outline btn-sm">
+                            <a href="resume-5.pdf" target="_blank" class="btn btn-outline btn-lg">
                                 <i data-lucide="external-link"></i> Open Fullscreen
                             </a>
                         </div>
-                    </div>
-                    <div class="pdf-viewer-wrapper" id="pdf-wrapper">
-                        <!-- Click to load overlay to prevent auto-focus scroll jacking -->
-                        <div class="pdf-fallback" id="pdf-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: var(--bg-card); z-index: 10; border-radius: 12px;">
-                            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                                <i data-lucide="file-text" style="width: 48px; height: 48px; color: var(--accent-primary);"></i>
-                                <p>Resume PDF is ready to view.</p>
-                                <button class="btn btn-primary" onclick="document.getElementById('pdf-iframe').src='resume-5.pdf'; document.getElementById('pdf-placeholder').style.display='none';">
-                                    Load Document
-                                </button>
-                            </div>
-                        </div>
-                        <!-- Embedded PDF View (Loads only when button is clicked) -->
-                        <iframe src="about:blank" type="application/pdf" width="100%" height="800px" style="border: none;" id="pdf-iframe">
-                            <div class="pdf-fallback">
-                                <i data-lucide="file-warning"></i>
-                                <p>It seems your browser doesn't support embedded PDFs.</p>
-                                <a href="resume-5.pdf" download class="btn btn-primary">Download PDF to View</a>
-                            </div>
-                        </iframe>
                     </div>
                 </div>
             </div>

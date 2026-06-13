@@ -993,65 +993,76 @@ section {
 }
 
 /* Resume Section */
-.resume-container {
-    background-color: var(--bg-card);
+.resume-card-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resume-download-card {
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(6, 182, 212, 0.03) 100%);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-}
-
-.resume-actions-bar {
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.file-name {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.file-name i {
-    color: var(--accent-primary);
-}
-
-.action-buttons {
-    display: flex;
-    gap: 0.75rem;
-}
-
-.pdf-viewer-wrapper {
-    background-color: var(--bg-primary);
-    position: relative;
-    min-height: 500px;
-}
-
-.pdf-fallback {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    padding: 3rem 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.pdf-fallback i {
-    width: 48px;
-    height: 48px;
-    color: var(--accent-warning);
+.resume-download-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(6, 182, 212, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.resume-card-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--bg-accent);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+}
+
+.resume-card-icon i {
+    width: 32px;
+    height: 32px;
+}
+
+.resume-card-details h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.resume-card-details .file-meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.resume-card-actions {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.resume-card-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* Contact Section */
