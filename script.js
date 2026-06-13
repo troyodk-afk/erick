@@ -143,20 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - 150)) {
+            if (window.scrollY >= sectionTop - 150) {
                 current = section.getAttribute('id');
             }
         });
 
         navItems.forEach(item => {
             item.classList.remove('active');
-            if (item.getAttribute('href').slice(1) === current) {
-                // If we want an active underline style
-                item.style.color = 'var(--text-primary)';
-            } else {
-                item.style.color = 'var(--text-secondary)';
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
             }
         });
-    });
+    }, { passive: true });
 });
