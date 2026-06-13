@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Troyo | Software Engineer II @ Meta</title>
+    <meta name="description" content="Portfolio of Erick Manuel Troyo Del Campo Díaz, Software Engineer II at Meta. Formerly Microsoft, Google, Uber. Specialist in distributed systems, infrastructure, and high-performance storage.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons (Lucide Icons via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Background Glow Elements -->
+    <div class="blob-glow blob-1"></div>
+    <div class="blob-glow blob-2"></div>
+    <div class="blob-glow blob-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-code">&lt;</span>Erick.Troyo<span class="logo-code"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#awards" class="nav-link">Awards</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <a href="resume-5.pdf" target="_blank" class="btn btn-outline btn-sm download-btn">
+                    <i data-lucide="download"></i> Resume PDF
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="role-badge">
+                        <span class="pulse-dot"></span> Software Engineer II @ Meta
+                    </div>
+                    <h1 class="hero-title">
+                        Building Scalable <span class="gradient-text-primary">Infrastructure</span> & <span class="gradient-text-secondary">AI-Era Pipelines</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Hi, I'm <strong>Erick Troyo</strong>. I specialize in system-level programming, distributed storage engines, and high-throughput data processing. Formerly designing platforms at <strong>Meta</strong>, <strong>Microsoft</strong>, and <strong>Google</strong>.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#experience" class="btn btn-primary btn-lg">Explore Experience</a>
+                        <a href="#contact" class="btn btn-outline btn-lg"><i data-lucide="mail"></i> Get In Touch</a>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual (Interactive Code Panel / Mini Stats) -->
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="visual-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="visual-title">sys_monitor.cpp</span>
+                        </div>
+                        <div class="visual-code-body">
+<pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span>
+
+<span class="keyword">struct</span> <span class="type">Engineer</span> {
+    <span class="type">std::string</span> name = <span class="string">"Erick Troyo"</span>;
+    <span class="type">std::vector&lt;std::string&gt;</span> exp = {
+        <span class="string">"Meta"</span>, <span class="string">"Microsoft"</span>, <span class="string">"Google"</span>
+    };
+    <span class="type">bool</span> passionForPerf = <span class="keyword">true</span>;
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Engineer</span> dev;
+    <span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; co : dev.exp) {
+        <span class="type">std::cout</span> &lt;&lt; <span class="string">"Scaling system at "</span> 
+                  &lt;&lt; co &lt;&lt; <span class="type">std::endl</span>;
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="mini-stats-grid">
+                        <div class="mini-stat-card">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Years of System Dev</span>
+                        </div>
+                        <div class="mini-stat-card">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">FAANG / Tier-1 Cos</span>
+                        </div>
+                        <div class="mini-stat-card">
+                            <span class="stat-number">Top 25</span>
+                            <span class="stat-label">ACM ICPC Regionals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile/About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-summary">
+                        <span class="section-tag">About Me</span>
+                        <h2 class="section-title">High-Performance Systems & Infrastructure</h2>
+                        <p class="about-description">
+                            I am a systems-focused software engineer with a track record of driving efficiency and scalability in core platforms. My work ranges from building advertisements event aggregation and anonymization infra at scale to writing low-level C/C++ storage drivers, kernel migrations, and live-connection pipelines for AI acceleration hardware.
+                        </p>
+                        <p class="about-description">
+                            I am passionate about performance optimization, memory-safe system designs, and automating developer tooling. In my career, I've successfully migrated petabyte-scale storage engines, billing systems, and deprecated loggers to save millions in hardware overhead.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i data-lucide="cpu"></i></div>
+                            <div>
+                                <h4>Distributed Systems</h4>
+                                <p>Designed and maintained critical billing, monetizer, and ad event infra at Google and Meta.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i data-lucide="database"></i></div>
+                            <div>
+                                <h4>DPU & Storage Accelerators</h4>
+                                <p>Developed node lifecycles and connection migrations for Microsoft Azure Storage utilizing DPUs.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i data-lucide="zap"></i></div>
+                            <div>
+                                <h4>Efficiency & Optimization</h4>
+                                <p>Saved 300TB/day in storage and 5GB/s in bandwidth during Facebook content ranking optimizations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Career Timeline</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">A history of building core systems and scaling infrastructure across industry leaders.</p>
+                </div>
+                
+                <div class="timeline-container">
+                    <!-- Timeline Sidebar (Navigation) -->
+                    <div class="timeline-tabs" id="timeline-tabs">
+                        <button class="tab-btn active" data-company="meta">
+                            <span class="tab-dot"></span>
+                            <span class="tab-company-name">Meta</span>
+                            <span class="tab-year">2026 - Pres.</span>
+                        </button>
+                        <button class="tab-btn" data-company="microsoft">
+                            <span class="tab-dot"></span>
+                            <span class="tab-company-name">Microsoft</span>
+                            <span class="tab-year">2025 - 2026</span>
+                        </button>
+                        <button class="tab-btn" data-company="google">
+                            <span class="tab-dot"></span>
+                            <span class="tab-company-name">Google</span>
+                            <span class="tab-year">2022 - 2025</span>
+                        </button>
+                        <button class="tab-btn" data-company="uber">
+                            <span class="tab-dot"></span>
+                            <span class="tab-company-name">Uber</span>
+                            <span class="tab-year">2021 (Intern)</span>
+                        </button>
+                        <button class="tab-btn" data-company="gamecoder">
+                            <span class="tab-dot"></span>
+                            <span class="tab-company-name">GameCoder</span>
+                            <span class="tab-year">2021</span>
+                        </button>
+                        <button class="tab-btn" data-company="facebook">
+                            <span class="tab-dot"></span>
+                            <span class="tab-company-name">Facebook (Intern)</span>
+                            <span class="tab-year">2019 - 2020</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Timeline Card Body -->
+                    <div class="timeline-panels" id="timeline-panels">
+                        <!-- Panel: Meta -->
+                        <div class="tab-panel active" id="panel-meta">
+                            <div class="panel-header">
+                                <div class="role-info">
+                                    <h3>Software Engineer II <span class="company-accent">@ Meta</span></h3>
+                                    <span class="job-meta"><i data-lucide="map-pin"></i> Bellevue, WA &bull; Ads Infra: Event Aggregation & Anonymization</span>
+                                </div>
+                                <span class="job-date">Jun 2026 – Present</span>
+                            </div>
+                            <ul class="job-highlights">
+                                <li>Building high-performance infrastructure for ads event aggregation and anonymization at scale.</li>
+                                <li>Ensuring robust data privacy and compliance across Meta’s advertising ecosystem.</li>
+                                <li>Optimizing data flow pipelines processing massive scale events with minimal resource footprint.</li>
+                            </ul>
+                            <div class="job-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Distributed Systems</span>
+                                <span class="tech-tag">Privacy Engineering</span>
+                                <span class="tech-tag">Data Pipelines</span>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Microsoft -->
+                        <div class="tab-panel" id="panel-microsoft">
+                            <div class="panel-header">
+                                <div class="role-info">
+                                    <h3>Software Engineer II <span class="company-accent">@ Microsoft</span></h3>
+                                    <span class="job-meta"><i data-lucide="map-pin"></i> Redmond, WA &bull; Azure Storage: DPU Migration</span>
+                                </div>
+                                <span class="job-date">Sep 2025 – Jun 2026</span>
+                            </div>
+                            <ul class="job-highlights">
+                                <li>Managed node lifecycle, extent placement, and live connection migrations to DPU-accelerated hardware, unlocking AI-era storage capabilities.</li>
+                                <li>Developed robust storage and migration tooling in C/C++, improving performance by leveraging hardware acceleration overlays.</li>
+                                <li>Leveraged advanced AI development workflows (Claude, Copilot) for code generation, auditing, and accelerating code-review loops.</li>
+                            </ul>
+                            <div class="job-tech">
+                                <span class="tech-tag">C/C++</span>
+                                <span class="tech-tag">Azure Storage</span>
+                                <span class="tech-tag">DPU / DPDK</span>
+                                <span class="tech-tag">Hardware Offload</span>
+                                <span class="tech-tag">System Tooling</span>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Google -->
+                        <div class="tab-panel" id="panel-google">
+                            <div class="panel-header">
+                                <div class="role-info">
+                                    <h3>Software Engineer <span class="company-accent">@ Google</span></h3>
+                                    <span class="job-meta"><i data-lucide="map-pin"></i> Seattle, WA &bull; Google Cloud Monetizer Pipelines & SA360</span>
+                                </div>
+                                <span class="job-date">Jun 2022 – Jun 2025</span>
+                            </div>
+                            <div class="project-block">
+                                <h5>Google Cloud Monetizer Pipelines: Orchestration</h5>
+                                <ul class="job-highlights">
+                                    <li>Ensured correct customer billing on Google Cloud Platform (GCP) by maintaining pipelines for discounts, fees, commitments, and account hierarchies.</li>
+                                    <li>Developed in Java and SQL; proactively resolved edge-case billing anomalies through clean pipeline orchestration.</li>
+                                    <li>Participated in core on-call rotations, maintaining 99.99% reliability of cloud monetization pipelines.</li>
+                                </ul>
+                            </div>
+                            <div class="project-block">
+                                <h5>Search Ads 360: Clickserver and Migrations</h5>
+                                <ul class="job-highlights">
+                                    <li>Implemented critical data migrators for compatibility and seamless migration to new Search Ads 360 systems.</li>
+                                    <li>Maintained sub-millisecond redirect and attribution clickservers using Java.</li>
+                                </ul>
+                            </div>
+                            <div class="job-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">GCP</span>
+                                <span class="tech-tag">Data Orchestration</span>
+                                <span class="tech-tag">On-Call</span>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Uber -->
+                        <div class="tab-panel" id="panel-uber">
+                            <div class="panel-header">
+                                <div class="role-info">
+                                    <h3>Software Engineer Intern <span class="company-accent">@ Uber</span></h3>
+                                    <span class="job-meta"><i data-lucide="map-pin"></i> Remote &bull; Host Life-Cycle - Infra Foundations</span>
+                                </div>
+                                <span class="job-date">Jun 2021 – Aug 2021</span>
+                            </div>
+                            <ul class="job-highlights">
+                                <li>Built Host Operator Console commands for secure credential management and user authentication in Go.</li>
+                                <li>Designed CLI components used by operators to handle bare-metal provisioning and credential verification lifecycle.</li>
+                            </ul>
+                            <div class="job-tech">
+                                <span class="tech-tag">Go</span>
+                                <span class="tech-tag">Infrastructure</span>
+                                <span class="tech-tag">Security</span>
+                                <span class="tech-tag">CLI Tooling</span>
+                            </div>
+                        </div>
+
+                        <!-- Panel: GameCoder -->
+                        <div class="tab-panel" id="panel-gamecoder">
+                            <div class="panel-header">
+                                <div class="role-info">
+                                    <h3>Software Engineer <span class="company-accent">@ GameCoder Studios</span></h3>
+                                    <span class="job-meta"><i data-lucide="map-pin"></i> Remote &bull; Infrastructure Team</span>
+                                </div>
+                                <span class="job-date">Jan 2021 – Jun 2021</span>
+                            </div>
+                            <ul class="job-highlights">
+                                <li>Developed robust Jenkins CI pipelines for active Mercurial projects, boosting developer build speed by automating tests.</li>
+                                <li>Automated server backups and securely configured corporate VPN access points for remote engineer onboarding.</li>
+                            </ul>
+                            <div class="job-tech">
+                                <span class="tech-tag">Jenkins</span>
+                                <span class="tech-tag">CI/CD</span>
+                                <span class="tech-tag">VPN / Networking</span>
+                                <span class="tech-tag">Mercurial</span>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Facebook -->
+                        <div class="tab-panel" id="panel-facebook">
+                            <div class="panel-header">
+                                <div class="role-info">
+                                    <h3>Software Engineer Intern <span class="company-accent">@ Facebook</span></h3>
+                                    <span class="job-meta"><i data-lucide="map-pin"></i> Remote / Seattle, WA &bull; Content Ranking & Real-Time Infra</span>
+                                </div>
+                                <span class="job-date">2019 – 2020 (Two Internships)</span>
+                            </div>
+                            <div class="project-block">
+                                <h5>News Feed Eng Ecosystem / Content Ranking (Jun 2020 – Aug 2020)</h5>
+                                <ul class="job-highlights">
+                                    <li>Deprecated the legacy Feed Logger system, saving 300TB/day in SQL storage and 5GB/s in transmission bandwidth.</li>
+                                    <li>Built a unified C++ data parser integrated with Hack/Python, giving ML engineers higher quality control over News Feed ranking features.</li>
+                                </ul>
+                            </div>
+                            <div class="project-block">
+                                <h5>Real-Time Infrastructure: Discovery & Storage (Jun 2019 – Aug 2019)</h5>
+                                <ul class="job-highlights">
+                                    <li>Reduced replica retrieval latency with async C++ programming inside distributed key-value storage.</li>
+                                    <li>Improved overall backend reliability via automated replica repair calls and network ping adjustments.</li>
+                                </ul>
+                            </div>
+                            <div class="job-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Hack</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Distributed Storage</span>
+                                <span class="tech-tag">Data Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technical Stack</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <p class="section-subtitle">A collection of languages and technologies used to build high-performance systems.</p>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="skills-filters">
+                    <button class="skill-filter-btn active" data-filter="all">All Skills</button>
+                    <button class="skill-filter-btn" data-filter="languages">Languages</button>
+                    <button class="skill-filter-btn" data-filter="infra">Infrastructure & Cloud</button>
+                    <button class="skill-filter-btn" data-filter="concepts">Systems Concepts</button>
+                </div>
+                
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-icon"><i data-lucide="code-2"></i></div>
+                        <h3>C/C++</h3>
+                        <p class="skill-time">6+ Years</p>
+                        <p class="skill-desc">High-performance async storage, DPU drivers, and News Feed data parsers.</p>
+                    </div>
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-icon"><i data-lucide="coffee"></i></div>
+                        <h3>Java</h3>
+                        <p class="skill-time">3+ Years</p>
+                        <p class="skill-desc">Google Cloud monetization, account billing pipelines, and SA360 migrators.</p>
+                    </div>
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-icon"><i data-lucide="binary"></i></div>
+                        <h3>Go</h3>
+                        <p class="skill-time">1+ Years</p>
+                        <p class="skill-desc">Developed operator host commands and API security credentials at Uber.</p>
+                    </div>
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-icon"><i data-lucide="terminal"></i></div>
+                        <h3>Python</h3>
+                        <p class="skill-time">4+ Years</p>
+                        <p class="skill-desc">Automation scripting, ML pipelines integration, and pipeline validation.</p>
+                    </div>
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-icon"><i data-lucide="database"></i></div>
+                        <h3>SQL</h3>
+                        <p class="skill-time">3+ Years</p>
+                        <p class="skill-desc">Relational schema design, high-volume query tuning, and database migrations.</p>
+                    </div>
+                    <div class="skill-card" data-category="languages">
+                        <div class="skill-icon"><i data-lucide="hash"></i></div>
+                        <h3>C#</h3>
+                        <p class="skill-time">2+ Years</p>
+                        <p class="skill-desc">Application architecture and object-oriented backend toolings.</p>
+                    </div>
+                    
+                    <!-- Infrastructure & Cloud -->
+                    <div class="skill-card" data-category="infra">
+                        <div class="skill-icon"><i data-lucide="cloud"></i></div>
+                        <h3>Google Cloud (GCP)</h3>
+                        <p class="skill-time">3 Years</p>
+                        <p class="skill-desc">Monetizer pipelines, cloud billing orchestration, and large-scale data systems.</p>
+                    </div>
+                    <div class="skill-card" data-category="infra">
+                        <div class="skill-icon"><i data-lucide="server"></i></div>
+                        <h3>Azure Storage</h3>
+                        <p class="skill-time">1 Year</p>
+                        <p class="skill-desc">DPU offloading, connection migration, node lifecycles, and extent placement.</p>
+                    </div>
+                    <div class="skill-card" data-category="infra">
+                        <div class="skill-icon"><i data-lucide="workflow"></i></div>
+                        <h3>CI/CD & Jenkins</h3>
+                        <p class="skill-time">3+ Years</p>
+                        <p class="skill-desc">Pipeline automation, unit test reporting, server backups, and build pipelines.</p>
+                    </div>
+                    
+                    <!-- Systems Concepts -->
+                    <div class="skill-card" data-category="concepts">
+                        <div class="skill-icon"><i data-lucide="cpu"></i></div>
+                        <h3>DPU / DPDK</h3>
+                        <p class="skill-time">1 Year</p>
+                        <p class="skill-desc">Offloading CPU tasks to storage accelerators for high-performance networks.</p>
+                    </div>
+                    <div class="skill-card" data-category="concepts">
+                        <div class="skill-icon"><i data-lucide="git-fork"></i></div>
+                        <h3>Distributed Systems</h3>
+                        <p class="skill-time">4+ Years</p>
+                        <p class="skill-desc">Replication logic, event aggregation, anonymization, and consensus concepts.</p>
+                    </div>
+                    <div class="skill-card" data-category="concepts">
+                        <div class="skill-icon"><i data-lucide="shield-alert"></i></div>
+                        <h3>Privacy Engineering</h3>
+                        <p class="skill-time">Active</p>
+                        <p class="skill-desc">Ads event aggregation anonymization and secure cross-platform tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Competitions Section -->
+        <section class="awards-section" id="awards">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Competitions</span>
+                    <h2 class="section-title">Awards & Achievements</h2>
+                    <p class="section-subtitle">Excellence in competitive programming and problem-solving hackathons.</p>
+                </div>
+                
+                <div class="awards-grid">
+                    <!-- Award 1: ICPC -->
+                    <div class="award-card">
+                        <div class="award-badge"><i data-lucide="trophy"></i></div>
+                        <h3>ACM ICPC Regional Finals</h3>
+                        <span class="award-date">2018 & 2019</span>
+                        <p class="award-desc">Advanced to the ACM ICPC Regional Finals for Mexico & Central America, finishing in the **Top 25** teams.</p>
+                    </div>
+
+                    <!-- Award 2: Hackathon 1st Places -->
+                    <div class="award-card highlighted-award">
+                        <div class="award-badge"><i data-lucide="medal"></i></div>
+                        <h3>Double 1st Place Champion</h3>
+                        <span class="award-date">Talent Land Hackathon 2018</span>
+                        <p class="award-desc">
+                            Won **1st Place** in "How to detect fake news" Hackathon. <br>
+                            Also secured **1st Place** in the Global Talent Land Hackathon out of **301 participating teams** from around the world.
+                        </p>
+                    </div>
+
+                    <!-- Award 3: OMI Gold -->
+                    <div class="award-card">
+                        <div class="award-badge"><i data-lucide="award"></i></div>
+                        <h3>Mexican Olympiad in Informatics</h3>
+                        <span class="award-date">2012 & 2013</span>
+                        <p class="award-desc">
+                            Won **3rd Place Gold Medal** in the Mexican Olympiad in Informatics (OMI) in 2013.<br>
+                            Won **8th Place Gold Medal** in OMI in 2012.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Document Viewer Section -->
+        <section class="resume-section" id="resume">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Curriculum Vitae</h2>
+                    <p class="section-subtitle">Read my official resume below or download it directly to your device.</p>
+                </div>
+                
+                <div class="resume-container">
+                    <div class="resume-actions-bar">
+                        <span class="file-name"><i data-lucide="file-text"></i> resume-5.pdf (131 KB)</span>
+                        <div class="action-buttons">
+                            <a href="resume-5.pdf" download class="btn btn-primary btn-sm">
+                                <i data-lucide="download-cloud"></i> Download
+                            </a>
+                            <a href="resume-5.pdf" target="_blank" class="btn btn-outline btn-sm">
+                                <i data-lucide="external-link"></i> Open Fullscreen
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pdf-viewer-wrapper">
+                        <!-- Embedded PDF View -->
+                        <iframe src="resume-5.pdf" type="application/pdf" width="100%" height="800px" style="border: none;" id="pdf-iframe">
+                            <div class="pdf-fallback">
+                                <i data-lucide="file-warning"></i>
+                                <p>It seems your browser doesn't support embedded PDFs.</p>
+                                <a href="resume-5.pdf" download class="btn btn-primary">Download PDF to View</a>
+                            </div>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-container">
+                <div class="contact-info-side">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="contact-desc">
+                        Whether you want to discuss system architectures, distributed databases, low-level tooling, or potential collaborations, feel free to ping me. I'm always open to talking tech.
+                    </p>
+                    
+                    <div class="contact-channels">
+                        <div class="channel">
+                            <div class="channel-icon"><i data-lucide="mail"></i></div>
+                            <div class="channel-details">
+                                <h4>Email</h4>
+                                <a href="mailto:troyodk@gmail.com">troyodk@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="channel">
+                            <div class="channel-icon"><i data-lucide="linkedin"></i></div>
+                            <div class="channel-details">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/troyodk" target="_blank">linkedin.com/in/troyodk</a>
+                            </div>
+                        </div>
+                        <div class="channel">
+                            <div class="channel-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="channel-details">
+                                <h4>Location</h4>
+                                <p>Bellevue / Seattle, WA Area</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Git-style contact form -->
+                <div class="contact-form-side">
+                    <div class="git-form-container">
+                        <div class="git-header">
+                            <span class="git-dot"></span>
+                            <span class="git-title"><i data-lucide="git-commit"></i> git commit -m "send message"</span>
+                        </div>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" class="form-control" placeholder="Jane Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" class="form-control" placeholder="jane@domain.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-msg">Message</label>
+                                <textarea id="form-msg" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+                                Push Message <i data-lucide="upload-cloud"></i>
+                            </button>
+                            <div class="form-status" id="form-status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Erick Manuel Troyo Del Campo Díaz. Handcrafted with HTML/CSS.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
