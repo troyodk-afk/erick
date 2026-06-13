@@ -58,6 +58,8 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -92,7 +94,7 @@ a {
 
 /* Decorative Background Blobs */
 .blob-glow {
-    position: absolute;
+    position: fixed;
     width: 600px;
     height: 600px;
     border-radius: 50%;
