@@ -531,9 +531,19 @@
                             </a>
                         </div>
                     </div>
-                    <div class="pdf-viewer-wrapper">
-                        <!-- Embedded PDF View -->
-                        <iframe src="resume-5.pdf" type="application/pdf" width="100%" height="800px" style="border: none;" id="pdf-iframe">
+                    <div class="pdf-viewer-wrapper" id="pdf-wrapper">
+                        <!-- Click to load overlay to prevent auto-focus scroll jacking -->
+                        <div class="pdf-fallback" id="pdf-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: var(--bg-card); z-index: 10; border-radius: 12px;">
+                            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                                <i data-lucide="file-text" style="width: 48px; height: 48px; color: var(--accent-primary);"></i>
+                                <p>Resume PDF is ready to view.</p>
+                                <button class="btn btn-primary" onclick="document.getElementById('pdf-iframe').src='resume-5.pdf'; document.getElementById('pdf-placeholder').style.display='none';">
+                                    Load Document
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Embedded PDF View (Loads only when button is clicked) -->
+                        <iframe src="about:blank" type="application/pdf" width="100%" height="800px" style="border: none;" id="pdf-iframe">
                             <div class="pdf-fallback">
                                 <i data-lucide="file-warning"></i>
                                 <p>It seems your browser doesn't support embedded PDFs.</p>
